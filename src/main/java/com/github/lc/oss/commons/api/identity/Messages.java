@@ -2,12 +2,9 @@ package com.github.lc.oss.commons.api.identity;
 
 import java.util.Set;
 
-import com.github.lc.oss.commons.serialization.Message.Category;
-import com.github.lc.oss.commons.serialization.Message.Severities;
-import com.github.lc.oss.commons.serialization.Message.Severity;
 import com.github.lc.oss.commons.util.TypedEnumCache;
 
-public interface Messages {
+public interface Messages extends com.github.lc.oss.commons.serialization.Message {
     enum Categories implements Category {
         Application,
         Authentication;
@@ -128,10 +125,4 @@ public interface Messages {
             return this.number;
         }
     }
-
-    Category getCategory();
-
-    Severity getSeverity();
-
-    int getNumber();
 }

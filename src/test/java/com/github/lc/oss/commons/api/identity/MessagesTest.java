@@ -9,6 +9,9 @@ import org.junit.jupiter.api.Test;
 
 import com.github.lc.oss.commons.api.identity.Messages.Application;
 import com.github.lc.oss.commons.api.identity.Messages.Authentication;
+import com.github.lc.oss.commons.api.identity.Messages.Categories;
+import com.github.lc.oss.commons.serialization.JsonMessage;
+import com.github.lc.oss.commons.serialization.Message;
 import com.github.lc.oss.commons.serialization.Message.Category;
 
 public class MessagesTest {
@@ -67,5 +70,29 @@ public class MessagesTest {
             Assertions.assertSame(a, Messages.Authentication.byName(a.name()));
             Assertions.assertSame(a, Messages.Authentication.tryParse(a.name()));
         });
+    }
+
+    @Test
+    public void test_isSame() {
+        Message n1 = new JsonMessage(null, null, -1);
+        Message n2 = new JsonMessage(Categories.Application, null, -1);
+        Message m1 = new JsonMessage(Categories.Application, Message.Severities.Error, 1);
+        Message m2 = new JsonMessage(Categories.Application, Message.Severities.Error, 1);
+        Message m3 = new JsonMessage(Categories.Application, Message.Severities.Warning, 1);
+        Message m4 = new JsonMessage(Categories.Authentication, Message.Severities.Error, 1);
+        Message m5 = new JsonMessage(Categories.Application, Message.Severities.Error, 2);
+
+        Assertions.assertTrue(n1.isSame(n1));
+        Assertions.assertFalse(n1.isSame(null));
+
+        Assertions.assertNotEquals(m1, m2);
+        Assertions.assertNotSame(m1, m2);
+        Assertions.assertFalse(m1 == m2);
+        Assertions.assertFalse(m1.isSame(n1));
+        Assertions.assertFalse(m1.isSame(n2));
+        Assertions.assertTrue(m1.isSame(m2));
+        Assertions.assertFalse(m1.isSame(m3));
+        Assertions.assertFalse(m1.isSame(m4));
+        Assertions.assertFalse(m1.isSame(m5));
     }
 }
