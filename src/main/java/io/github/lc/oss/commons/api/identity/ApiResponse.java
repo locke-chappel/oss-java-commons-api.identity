@@ -1,8 +1,8 @@
-package com.github.lc.oss.commons.api.identity;
+package io.github.lc.oss.commons.api.identity;
 
 import java.util.Collection;
 
-import com.github.lc.oss.commons.serialization.Jsonable;
+import io.github.lc.oss.commons.serialization.Jsonable;
 
 public interface ApiResponse<T extends ApiObject> extends Jsonable {
     T getBody();

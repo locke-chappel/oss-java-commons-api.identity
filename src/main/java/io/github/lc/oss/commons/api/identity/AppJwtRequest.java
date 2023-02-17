@@ -1,4 +1,4 @@
-package com.github.lc.oss.commons.api.identity;
+package io.github.lc.oss.commons.api.identity;
 
 import java.util.Collection;
 import java.util.Map;

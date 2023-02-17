@@ -1,6 +1,6 @@
-package com.github.lc.oss.commons.api.identity;
+package io.github.lc.oss.commons.api.identity;
 
-import com.github.lc.oss.commons.serialization.JsonableCollection;
+import io.github.lc.oss.commons.serialization.JsonableCollection;
 
 /**
  * Marker interface

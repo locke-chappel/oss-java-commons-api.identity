@@ -1,4 +1,4 @@
-package com.github.lc.oss.commons.api.identity;
+package io.github.lc.oss.commons.api.identity;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -7,12 +7,12 @@ import java.util.Set;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import com.github.lc.oss.commons.api.identity.Messages.Application;
-import com.github.lc.oss.commons.api.identity.Messages.Authentication;
-import com.github.lc.oss.commons.api.identity.Messages.Categories;
-import com.github.lc.oss.commons.serialization.JsonMessage;
-import com.github.lc.oss.commons.serialization.Message;
-import com.github.lc.oss.commons.serialization.Message.Category;
+import io.github.lc.oss.commons.api.identity.Messages.Application;
+import io.github.lc.oss.commons.api.identity.Messages.Authentication;
+import io.github.lc.oss.commons.api.identity.Messages.Categories;
+import io.github.lc.oss.commons.serialization.JsonMessage;
+import io.github.lc.oss.commons.serialization.Message;
+import io.github.lc.oss.commons.serialization.Message.Category;
 
 public class MessagesTest {
     @Test

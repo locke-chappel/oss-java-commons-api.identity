@@ -1,10 +1,10 @@
-package com.github.lc.oss.commons.api.identity;
+package io.github.lc.oss.commons.api.identity;
 
 import java.util.Set;
 
-import com.github.lc.oss.commons.util.TypedEnumCache;
+import io.github.lc.oss.commons.util.TypedEnumCache;
 
-public interface Messages extends com.github.lc.oss.commons.serialization.Message {
+public interface Messages extends io.github.lc.oss.commons.serialization.Message {
     enum Categories implements Category {
         Application,
         Authentication;
