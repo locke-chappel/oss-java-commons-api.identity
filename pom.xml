@@ -12,7 +12,7 @@
     <version>1.0.10</version>
     <name>${project.artifactId}</name>
     <description>API contract for performing authentication and authorization requests</description>
-    <url>https://github.com/locke-chappel/oss-commons-api.identity</url>
+    <url>https://github.com/locke-chappel/oss-java-commons-api.identity</url>
 
     <licenses>
         <license>
